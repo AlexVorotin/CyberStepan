@@ -80,7 +80,7 @@ async def _wait_not_disabled(page: Page, selector: str, timeout: float = 8.0) ->
     logger.warning("_wait_not_disabled timed out for %s", selector)
 
 
-async def _type_and_click(page: Page, input_id: str, query: str, select_value: str = None, wait_ms: int = 1500) -> list[str]:
+async def _type_and_click(page: Page, input_id: str, query: str, select_value: str = None, wait_ms: int = 2500) -> list[str]:
     """
     Combined: type query into #input_id, read dropdown items, then click the item
     matching select_value (if provided) — all in one go while dropdown is still open.
